@@ -2,9 +2,11 @@
   "name": "preact-photon-styled",
   "version": "1.0.0",
   "description": "Preact photon components",
+  "main": "dist/preact-photon-styled.js",
   "scripts": {
     "build": "webpack --config ./webpack/webpack.prod.js",
-    "start": "webpack serve --config ./webpack/webpack.dev.js "
+    "start": "webpack serve --config ./webpack/webpack.dev.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
