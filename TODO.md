@@ -7,7 +7,7 @@
 - [x] Radio
 - [x] Button
 - [x] ButtonGroup
+- [x] Toolbar
 - [ ] Form
-- [ ] Toolbar
 - [ ] FormGroup
 - [ ] NavGroup

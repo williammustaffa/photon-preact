@@ -8,7 +8,8 @@ import {
   Title,
   Window,
   Radio,
-  Checkbox
+  Checkbox,
+  Toolbar
 } from '@components';
 
 const Container = styled.div`
@@ -26,6 +27,12 @@ export function Demo() {
   return (
     <Theme>
       <Window>
+        <Toolbar header>
+          <Title>Toolbar header</Title>
+          <Toolbar.Actions>
+            <Button icon="globe" />
+          </Toolbar.Actions>
+        </Toolbar>
         <Window.Content>
           <Container>
             <Section>
@@ -88,6 +95,9 @@ export function Demo() {
             </Section>
           </Container>
         </Window.Content>
+        <Toolbar footer>
+          <Title>Toolbar header</Title>
+        </Toolbar>
       </Window>
     </Theme>
   );

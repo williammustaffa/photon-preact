@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { IconStyled } from '@components/Icon/Icon.styles'
 import { getProps } from '@components/Theme';
-import { BaseInput } from '@commons';
+import { BaseInput } from '@base-css';
 import iconMap from '@fonts/icon-map.json';
 
 export const ButtonStyled = styled.button`

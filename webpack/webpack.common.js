@@ -55,7 +55,7 @@ module.exports = {
       'react-dom': 'preact/compat',
       'react-dom/test-utils': 'preact/test-utils',
       '@components': path.resolve(__dirname, '../src/components'),
-      '@commons': path.resolve(__dirname, '../src/commons'),
+      '@base-css': path.resolve(__dirname, '../src/base-css'),
       '@fonts': path.resolve(__dirname, '../src/fonts')
     }
   },

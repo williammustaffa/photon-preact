@@ -145,6 +145,7 @@ export const GlobalPageStyles = createGlobalStyle`
     text-overflow: ellipsis;
   }
 
+  // Move to Headng components
   h1 {
     font-size: 36px;
   }

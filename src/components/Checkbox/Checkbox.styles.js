@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BaseInput } from '@commons';
+import { BaseInput } from '@base-css';
 
 export const CheckboxWrapper = styled.div`
   position: relative;
