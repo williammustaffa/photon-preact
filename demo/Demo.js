@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import styled from 'styled-components';
-import { Theme, Button } from '@components';
+import { Theme, Button, ButtonGroup } from '@components';
 
 const Container = styled.div`
   width: 100%auto;
@@ -43,6 +43,25 @@ export function Demo() {
         <Section>
           <h2>Dropdown</h2>
           <Button secondary dropdown>Fist</Button>
+        </Section>
+        <Section>
+          <h2>ButtonGroup Icons</h2>
+          <ButtonGroup>
+            <Button icon="globe" secondary />
+            <Button icon="home" secondary active />
+            <Button icon="attach" secondary/>
+            <Button icon="lock" secondary />
+            <Button icon="code" secondary/>
+          </ButtonGroup>
+        </Section>
+        <Section>
+          <h2>ButtonGroup Text</h2>
+          <ButtonGroup>
+            <Button icon="globe" primary active>Home</Button>
+            <Button warning>Page 1</Button>
+            <Button positive>Page 2</Button>
+            <Button negative>Page 3</Button>
+          </ButtonGroup>
         </Section>
       </Container>
     </Theme>

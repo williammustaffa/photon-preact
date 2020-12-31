@@ -1,10 +1,8 @@
 import { h } from 'preact';
-import classNames from 'classnames';
+import { ButtonGroupStyled } from './ButtonGroup.styles';
 
-export function ButtonGroup({ children, className, ...props }) {
-  const componentClass = classNames([className, 'btn-group']);
-
+export function ButtonGroup({ children, ...props }) {
   return (
-    <div className={componentClass} {...props}>{children}</div>
+    <ButtonGroupStyled {...props}>{children}</ButtonGroupStyled>
   );
 }

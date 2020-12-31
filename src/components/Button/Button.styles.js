@@ -23,6 +23,18 @@ export const ButtonStyled = styled.button`
     box-shadow: none;
   }
 
+  // Icon inside button styles
+  ${IconStyled} {
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: #737475;
+    font-size: 14px;
+    line-height: 1;
+  }
+
   // Non-theme variants
   display: ${props => props.hidden ? 'none' : 'inline-block' };
   opacity: ${props => props.disabled ? 0.5 : 1};
@@ -37,14 +49,6 @@ export const ButtonStyled = styled.button`
     if (props.large) return '6px 12px';
     return '3px 8px';
   }};
-
-  // Button form
-  ${props => {
-    return props.form && css`
-      padding-right: 20px;
-      padding-left: 20px;
-    `
-  }}
 
   // Dropdown
   ${props => {
@@ -85,15 +89,30 @@ export const ButtonStyled = styled.button`
     `;
   }}
 
-  // Icon inside button styles
-  ${IconStyled} {
-    float: left;
-    width: 14px;
-    height: 14px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    color: #737475;
-    font-size: 14px;
-    line-height: 1;
-  }
+  /* Other components interaction */
+  // Button form
+  ${props => {
+    return props.form && css`
+      padding-right: 20px;
+      padding-left: 20px;
+    `
+  }}
+
+  // Active for button group
+  ${props => {
+    return props.active && css`
+      color: #fff;
+      border: 1px solid transparent;
+      background-color: #6d6c6d;
+      background-image: none;
+
+      &:not(:first-child) {
+        border-left: 0!important;
+      }
+
+      ${IconStyled} {
+        color: #fff;
+      }
+    `
+  }}
 `;
