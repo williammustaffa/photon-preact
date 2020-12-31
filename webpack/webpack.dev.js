@@ -14,7 +14,7 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   entry:  path.join(SRC_PATH, 'index.js'),
   output: {
-    filename: 'preact-photon-styled.js',
+    filename: 'photon-preact.js',
     path: DIST_PATH
   },
   devServer: {

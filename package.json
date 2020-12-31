@@ -1,8 +1,8 @@
 {
   "name": "preact-photon-styled",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Preact photon components",
-  "main": "dist/preact-photon-styled.js",
+  "main": "dist/preact-photon.js",
   "scripts": {
     "build": "webpack --config ./webpack/webpack.prod.js",
     "start": "webpack serve --config ./webpack/webpack.dev.js",

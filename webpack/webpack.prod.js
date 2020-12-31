@@ -13,7 +13,7 @@ module.exports = merge(common, {
   mode: 'production',
   entry: path.join(SRC_PATH, 'index.js'),
   output: {
-    filename: 'preact-photon-styled.js',
+    filename: 'photon-preact.js',
     path: DIST_PATH
   },
   plugins: [
