@@ -1,10 +1,6 @@
 import { h } from 'preact';
-import classNames from 'classnames';
+import { TitleStyled } from './Title.styles';
 
-export function Title({ children, className, ...props }) {
-  const componentClass = classNames([className, 'title']);
-
-  return (
-    <h1 className={componentClass} {...props}>{children}</h1>
-  );
-}
+export const Title = ({ children, ...props }) => (
+  <TitleStyled {...props}>{children}</TitleStyled>
+);

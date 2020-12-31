@@ -10,3 +10,4 @@ export * from './Radio';
 export * from './Title';
 export * from './Toolbar';
 export * from './NavGroup';
+export * from './Window';

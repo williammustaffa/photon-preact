@@ -1,16 +1,12 @@
 import { h } from 'preact';
-import classNames from 'classnames';
+import { CheckboxStyled, CheckboxWrapper } from './Checkbox.styles';
 
-export function Checkbox({ children, className, label, ...props }) {
-  const componentClass = classNames('checkbox', className);
-
-  return (
-    <div className={componentClass}>
-      <label>
-        <input type="checkbox" {...props} />
-        {label}
-        {children}
-      </label>
-    </div>
-  );
-}
+export const Checkbox = ({ children, label, ...props }) => (
+  <CheckboxWrapper>
+    <label>
+      <CheckboxStyled {...props} />
+      {label}
+      {children}
+    </label>
+  </CheckboxWrapper>
+)

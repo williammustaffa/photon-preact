@@ -1,21 +1,3 @@
- .window {
-   position: absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   display: flex;
-   flex-direction: column;
-   background-color: #fff;
- }
-
- .window-content {
-   position: relative;
-   overflow-y: auto;
-   display: flex;
-   flex: 1;
- }
-
  .selectable-text {
    cursor: text;
    -webkit-user-select: text;
@@ -146,6 +128,7 @@
  .toolbar-header {
    border-bottom: 1px solid #c2c0c2;
  }
+
  .toolbar-header .title {
    margin-top: 1px;
  }
@@ -153,15 +136,6 @@
  .toolbar-footer {
    border-top: 1px solid #c2c0c2;
    -webkit-app-region: drag;
- }
-
- .title {
-   margin: 0;
-   font-size: 12px;
-   font-weight: 400;
-   text-align: center;
-   color: #555;
-   cursor: default;
  }
 
  .toolbar-borderless {

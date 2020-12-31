@@ -1,69 +1,94 @@
 import { h } from 'preact';
 import styled from 'styled-components';
-import { Theme, Button, ButtonGroup } from '@components';
+import {
+  Theme,
+  Button,
+  ButtonGroup,
+  Input,
+  Title,
+  Window,
+  Radio,
+  Checkbox
+} from '@components';
 
 const Container = styled.div`
-  width: 100%auto;
+  width: 100%;
   max-width: 787px;
   margin: 0 auto;
-`
+`;
 
 const Section = styled.div`
-  overflow: hidden;
   display: block;
-`
+  clear: both;
+`;
 
 export function Demo() {
   return (
     <Theme>
-      <Container>
-        <Section>
-          <h2>Button types</h2>
-          <Button primary>Primary</Button>
-          <Button secondary>Secondary</Button>
-          <Button positive>Positive</Button>
-          <Button negative>Negative</Button>
-          <Button warning>Warning</Button>
-        </Section>
-        <Section>
-          <h2>Button sizes</h2>
-          <Button secondary large>Primary</Button>
-          <Button secondary mini>Primary</Button>
-        </Section>
-        <Section>
-          <h2>Button icons</h2>
-          <Button secondary icon="globe">Icon</Button>
-          <Button secondary icon="cw">Icon</Button>
-        </Section>
-        <Section>
-          <h2>Float</h2>
-          <Button secondary pullRight>Fist</Button>
-          <Button secondary pullLeft>Second</Button>
-        </Section>
-        <Section>
-          <h2>Dropdown</h2>
-          <Button secondary dropdown>Fist</Button>
-        </Section>
-        <Section>
-          <h2>ButtonGroup Icons</h2>
-          <ButtonGroup>
-            <Button icon="globe" secondary />
-            <Button icon="home" secondary active />
-            <Button icon="attach" secondary/>
-            <Button icon="lock" secondary />
-            <Button icon="code" secondary/>
-          </ButtonGroup>
-        </Section>
-        <Section>
-          <h2>ButtonGroup Text</h2>
-          <ButtonGroup>
-            <Button icon="globe" primary active>Home</Button>
-            <Button warning>Page 1</Button>
-            <Button positive>Page 2</Button>
-            <Button negative>Page 3</Button>
-          </ButtonGroup>
-        </Section>
-      </Container>
+      <Window>
+        <Window.Content>
+          <Container>
+            <Section>
+              <h2>Button types</h2>
+              <Button>Default</Button>
+              <Button primary>Primary</Button>
+              <Button positive>Positive</Button>
+              <Button negative>Negative</Button>
+              <Button warning>Warning</Button>
+            </Section>
+            <Section>
+              <h2>Button sizes</h2>
+              <Button large>Primary</Button>
+              <Button mini>Primary</Button>
+            </Section>
+            <Section>
+              <h2>Button icons</h2>
+              <Button icon="globe">Icon</Button>
+              <Button icon="cw">Icon</Button>
+            </Section>
+            <Section>
+              <h2>Float</h2>
+              <Button pullRight>Fist</Button>
+              <Button pullLeft>Second</Button>
+            </Section>
+            <Section>
+              <h2>Dropdown</h2>
+              <Button dropdown>Fist</Button>
+            </Section>
+            <Section>
+              <h2>ButtonGroup Icons</h2>
+              <ButtonGroup>
+                <Button icon="globe" />
+                <Button icon="home" active />
+                <Button icon="attach"/>
+                <Button icon="lock" />
+                <Button icon="code"/>
+              </ButtonGroup>
+            </Section>
+            <Section>
+              <h2>ButtonGroup Text</h2>
+              <ButtonGroup>
+                <Button icon="globe" primary active>Home</Button>
+                <Button warning>Page 1</Button>
+                <Button positive>Page 2</Button>
+                <Button negative>Page 3</Button>
+              </ButtonGroup>
+            </Section>
+            <Section>
+              <h2>Form</h2>
+              <Input label='Text field' defaultValue="Default value" />
+              <Radio name="radio-group">Radio with children</Radio>
+              <Radio name="radio-group">Radio with label prop</Radio>
+              <Checkbox name="radio-group">Checkbox with children</Checkbox>
+              <Checkbox name="radio-group">Checkbox with label prop</Checkbox>
+            </Section>
+            <Section>
+              <h2>Title</h2>
+              <Title>Example title</Title>
+            </Section>
+          </Container>
+        </Window.Content>
+      </Window>
     </Theme>
   );
 }

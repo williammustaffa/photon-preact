@@ -1,16 +1,9 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 // Add fonts
 import photonEntypoEOT from '@fonts/photon-entypo.eot'
 import photonEntypoWOFF from '@fonts/photon-entypo.woff'
 import photonEntypoTTF from '@fonts/photon-entypo.ttf'
-
-
-export const GlobalComponentStyles = css`
-  ${props => props.pullLeft && css`float: left;`}
-  ${props => props.pullRight && css`float: right;`}
-  ${props => props.hidden && css`display: none;`}
-`;
 
 export const GlobalPageStyles = createGlobalStyle`
   @font-face {
@@ -87,31 +80,6 @@ export const GlobalPageStyles = createGlobalStyle`
     font-size: 1em;
   }
 
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    color: inherit;
-    font: inherit;
-    margin: 0;
-  }
-
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-  }
-
-  input[type="search"] {
-    -webkit-appearance: textfield;
-    box-sizing: content-box;
-  }
-
-  input[type="search"]::-webkit-search-cancel-button,
-  input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-
   fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
@@ -136,20 +104,6 @@ export const GlobalPageStyles = createGlobalStyle`
   * {
     cursor: default;
     -webkit-user-select: none;
-  }
-
-  input,
-  textarea {
-    -webkit-user-select: text;
-  }
-
-  form,
-  input,
-  optgroup,
-  select,
-  textarea {
-    -webkit-user-select: text;
-    -webkit-app-region: no-drag;
   }
 
   * {

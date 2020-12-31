@@ -10,6 +10,12 @@ export const getProps = (path, callback) => props => {
 
 export function Theme({ children }) {
   const theme = {
+    typography: {
+      fontSize: '12px',
+      h1: {
+        fontSize: '2em',
+      }
+    },
     fontSize: 12,
     flat: false,
     primary: {

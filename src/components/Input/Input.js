@@ -1,13 +1,9 @@
-import { h, Fragment } from 'preact';
-import classNames from 'classnames';
+import { h } from 'preact';
+import { InputStyled, InputWrapper } from './Input.styles';
 
-export function Input({ className, label, ...props }) {
-  const inputClass = classNames('form-control', className);
-
-  return (
-    <Fragment>
-      {label && <label>{label}</label>}
-      <input className={inputClass} {...props} />
-    </Fragment>
-  );
-}
+export const Input = ({ className, label, ...props }) => (
+  <InputWrapper>
+    {label && <label>{label}</label>}
+    <InputStyled {...props} />
+  </InputWrapper>
+);

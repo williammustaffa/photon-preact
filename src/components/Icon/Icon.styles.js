@@ -6,7 +6,6 @@ export const IconStyled = styled.span`
    position: relative;
    display: inline-block;
    font-family: "photon-entypo";
-   speak: none;
    font-size: 100%;
    font-style: normal;
    font-weight: normal;

@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
 import { IconStyled } from '@components/Icon/Icon.styles'
-import { getProps, GlobalComponentStyles } from '@components/Theme';
+import { getProps } from '@components/Theme';
+import { BaseInput } from '@commons';
 import iconMap from '@fonts/icon-map.json';
 
 export const ButtonStyled = styled.button`
   // Apply global properties
-  ${GlobalComponentStyles}
+  ${BaseInput}
 
   // Specific styles
   margin-bottom: 0;
@@ -40,7 +41,7 @@ export const ButtonStyled = styled.button`
   opacity: ${props => props.disabled ? 0.5 : 1};
 
   // Theme variants
-  font-size: ${getProps('fontSize')}px;
+  font-size: ${getProps('typography.fontSize')};
   border-radius: ${getProps('flat', flat => !flat ? '4px' : '0')};
 
   // Button size
@@ -64,10 +65,10 @@ export const ButtonStyled = styled.button`
   // Button type
   ${props => {
     // In order of priority
-    const type = ['primary', 'secondary', 'positive', 'negative', 'warning'].find(key => !!props[key]);
+    const type = ['primary', 'secondary', 'positive', 'negative', 'warning'].find(key => !!props[key]) || 'secondary';
     const getProp = path => getProps(`${type}.${path}`);
 
-    return type && css`
+    return css`
       color: ${getProp('color')};
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
       border-color: ${getProp('border')};
