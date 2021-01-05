@@ -2,7 +2,7 @@
   "name": "photon-preact",
   "version": "1.0.1",
   "description": "Preact photon components",
-  "main": "dist/photon-preact.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "webpack --config ./webpack/webpack.prod.js",
     "start": "webpack serve --config ./webpack/webpack.dev.js",
@@ -36,20 +36,22 @@
     "resolve-url-loader": "^3.1.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
-    "styled-components": "^5.2.1",
+    "styled-components": "^4.4.1",
     "url-loader": "^4.1.1",
-    "webpack": "^5.11.1",
+    "webpack": "^4.44.2",
     "webpack-cli": "^4.3.0",
     "webpack-dev-server": "^3.11.1",
     "webpack-extension-reloader": "^1.1.4",
     "webpack-merge": "^5.7.3",
-    "webpack-node-externals": "^2.5.2"
+    "preact": "^10.0.5"
+  },
+  "peerDependencies": {
+    "preact": "*"
   },
   "dependencies": {
     "classnames": "^2.2.6",
     "core-js": "^3.8.1",
     "lodash": "^4.17.20",
-    "preact": "^10.0.5",
     "regenerator-runtime": "^0.13.7"
   }
 }

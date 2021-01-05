@@ -7,24 +7,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              [
-                '@babel/preset-env',
-                {
-                  "useBuiltIns": "usage",
-                  "corejs": 3,
-                  "targets": "> 0.25%, not dead"
-                }
-              ]
-            ],
-            plugins: [
-              ["@babel/plugin-transform-react-jsx", { "pragma": "h" }]
-            ]
-          }
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,

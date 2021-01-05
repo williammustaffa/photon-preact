@@ -10,7 +10,7 @@ import {
   Radio,
   Checkbox,
   Toolbar
-} from '@components';
+} from '../src';
 
 const Container = styled.div`
   width: 100%;

@@ -16,16 +16,20 @@ module.exports = merge(common, {
   output: {
     filename: `${package.name}.js`,
     path: DIST_PATH,
-    library: package.name,
-    libraryTarget: 'module'
+    library: 'PhotonPreact',
+    libraryTarget: 'umd'
   },
-  experiments: {
-    outputModule: true
-  },
-  optimization: {
-    minimize: false
+  externals: {
+    'preact': true,
+    'preact/hooks': true,
+    'preact/compat': true
   },
   plugins: [
-    new CleanWebpackPlugin()
-  ]
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['!dist/index.js']
+    })
+  ],
+  optimization: {
+    minimize: false
+  }
 });
