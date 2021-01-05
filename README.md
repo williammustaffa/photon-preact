@@ -1,1 +1,1 @@
-# preact-photon-styled
+# photon-preact

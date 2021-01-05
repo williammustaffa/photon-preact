@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge');
 const path = require('path');
 const common = require('./webpack.common.js');
+const package = require('../package.json');
 
 // Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -12,9 +13,9 @@ const SRC_PATH = path.resolve(__dirname, '..', 'demo');
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
-  entry:  path.join(SRC_PATH, 'index.js'),
+  entry: path.join(SRC_PATH, 'index.js'),
   output: {
-    filename: 'photon-preact.js',
+    filename: `${package.name}.js`,
     path: DIST_PATH
   },
   devServer: {
@@ -23,7 +24,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Preact Photon Styled DEMO",
+      title: "Photon Preact DEMO",
       filename: 'index.html',
       template: './demo/index.html'
     })
