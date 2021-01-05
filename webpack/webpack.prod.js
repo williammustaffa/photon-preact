@@ -28,8 +28,5 @@ module.exports = merge(common, {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['!dist/index.js']
     })
-  ],
-  optimization: {
-    minimize: false
-  }
+  ]
 });
